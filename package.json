@@ -1,6 +1,7 @@
 {
-  "name": "figma",
-  "version": "0.1.0",
+  "name": "car-rental-react",
+  "version": "1.0.0",
+  "description": "This application will be used to book a car for rent",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
