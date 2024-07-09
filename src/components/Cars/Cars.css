@@ -1,5 +1,7 @@
 /** @format */
 
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap");
+
 .card {
   position: relative;
   width: 489px;
@@ -12,6 +14,13 @@
   margin: 20px;
   display: flex;
   flex-direction: column;
+  font-family: "Barlow", sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .card-image-wrapper {
@@ -35,7 +44,6 @@
 }
 
 .card-title {
-  font-family: "Barlow", sans-serif;
   font-weight: 700;
   font-size: 22px;
   line-height: 160%;
@@ -44,7 +52,6 @@
 }
 
 .card-subtitle {
-  font-family: "Barlow", sans-serif;
   font-weight: 500;
   font-size: 14px;
   line-height: 160%;
@@ -66,7 +73,6 @@
   background: #000509;
   border-radius: 15px;
   color: #ffffff;
-  font-family: "Barlow", sans-serif;
   font-weight: 600;
   font-size: 14px;
   position: relative;
@@ -79,7 +85,6 @@
 }
 
 .card-price {
-  font-family: "Barlow", sans-serif;
   font-weight: 500;
   font-size: 20px;
   line-height: 158%;
@@ -87,7 +92,6 @@
 }
 
 .card-duration {
-  font-family: "Barlow", sans-serif;
   font-weight: 400;
   font-size: 16px;
   color: #666;
