@@ -9,12 +9,12 @@ import Profile from "../../assets/images/profile.png";
 const Card = ({ car }) => {
   return (
     <div className="card">
-      <div className="card-image-wrapper">
-        <img src={car.image} alt={car.model} className="card-image" />
-      </div>
       <div className="card-content">
-        <div className="card-title">{car.model}</div>
-        <div className="card-subtitle">or Similar | {car.type}</div>
+        <div className="card-title">{car.name}</div>
+        <div className="card-subtitle">or Similar | {car.category}</div>
+        <div className="">
+          <img src={car.image} alt={car.name} className="card-image" />
+        </div>
         <div className="card-info">
           <span className="info-badge">
             <img src={Profile} alt="Seats" className="vector-icon" />
