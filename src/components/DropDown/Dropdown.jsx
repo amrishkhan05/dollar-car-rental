@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import "./Dropdown.css";
 import DropdownArrow from "../../assets/images/dropdown_arrow_down.svg";
+import DropdownArrowWhite from "../../assets/images/dropDownWhite.svg";
 
 const Dropdown = ({ name, options }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +14,11 @@ const Dropdown = ({ name, options }) => {
   };
 
   const handleOptionClick = (option) => {
-    setSelectedOption(option);
+    if (selectedOption?.value === option.value) {
+      setSelectedOption(null);
+    } else {
+      setSelectedOption(option);
+    }
     setIsOpen(false);
   };
 
@@ -26,7 +31,10 @@ const Dropdown = ({ name, options }) => {
 
   return (
     <div className="dropdown">
-      <div className="dropdown-header" onClick={toggleDropdown}>
+      <div
+        className={`dropdown-header ${selectedOption ? "selected" : ""}`}
+        onClick={toggleDropdown}
+      >
         {getDisplayValue()}
         <span className={`dropdown-arrow ${isOpen ? "open" : ""}`}>
           <img src={DropdownArrow} alt="dropdown icon" />
@@ -37,13 +45,14 @@ const Dropdown = ({ name, options }) => {
           {options.map((option) => (
             <li
               key={option.value}
-              className="dropdown-item"
+              className={`dropdown-item ${
+                selectedOption?.value === option.value ? "selected" : ""
+              }`}
               onClick={() => handleOptionClick(option)}
             >
               {option.icon && (
                 <img src={option.icon} alt="icon" className="dropdown-icon" />
               )}
-              {/* // <img src={option.icon} alt="icon" className="dropdown-icon" /> */}
               <span className="dropdown-label">{option.label}</span>
             </li>
           ))}
