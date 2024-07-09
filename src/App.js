@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <HomePage />
+      <HomePage style={{ borderRadius: "0 0 25px 25px" }} />
       <Footer />
     </div>
   );

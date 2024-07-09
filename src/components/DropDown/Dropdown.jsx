@@ -2,38 +2,32 @@
 
 import React, { useState } from "react";
 import "./Dropdown.css";
-import dropdownIcon from "../../assets/images/Vector.svg";
 import DropdownArrow from "../../assets/images/dropdown_arrow_down.svg";
-const Dropdown = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [selectedOption, setSelectedOption] = useState("Vehicle Type");
 
-  const options = [
-    { value: "SUV", label: "SUV" },
-    { value: "Mini", label: "Mini" },
-    { value: "Commercial", label: "Commercial" },
-    { value: "Electric", label: "Electric" },
-    { value: "Premium", label: "Premium" },
-    { value: "Compact", label: "Compact" },
-    { value: "People Movers", label: "People Movers" },
-    { value: "Economy", label: "Economy" },
-    { value: "Standard", label: "Standard" },
-    { value: "Intermediate", label: "Intermediate" },
-  ];
+const Dropdown = ({ name, options }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedOption, setSelectedOption] = useState(null);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
 
   const handleOptionClick = (option) => {
-    setSelectedOption(option.label);
+    setSelectedOption(option);
     setIsOpen(false);
+  };
+
+  const getDisplayValue = () => {
+    if (!selectedOption) return name;
+    return name.includes("Vehicle Type")
+      ? `${name} (${selectedOption.label})`
+      : selectedOption.label;
   };
 
   return (
     <div className="dropdown">
       <div className="dropdown-header" onClick={toggleDropdown}>
-        {selectedOption}
+        {getDisplayValue()}
         <span className={`dropdown-arrow ${isOpen ? "open" : ""}`}>
           <img src={DropdownArrow} alt="dropdown icon" />
         </span>
@@ -46,8 +40,11 @@ const Dropdown = () => {
               className="dropdown-item"
               onClick={() => handleOptionClick(option)}
             >
-              <img src={dropdownIcon} alt="icon" className="dropdown-icon" />{" "}
-              {option.label}
+              {option.icon && (
+                <img src={option.icon} alt="icon" className="dropdown-icon" />
+              )}
+              {/* // <img src={option.icon} alt="icon" className="dropdown-icon" /> */}
+              <span className="dropdown-label">{option.label}</span>
             </li>
           ))}
         </ul>
