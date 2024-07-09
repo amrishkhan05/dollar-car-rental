@@ -16,7 +16,7 @@ const cars = [
     price: "1,850",
     duration: "21 Days",
     image:
-      "https://i.pinimg.com/736x/d2/6d/2a/d26d2aab2ff63cb48b3a91b0e8e0aa55.jpg", // Replace with actual image URL
+      "https://i.pinimg.com/736x/d2/6d/2a/d26d2aab2ff63cb48b3a91b0e8e0aa55.jpg",
   },
   {
     name: "Nissan Centra",
@@ -24,11 +24,11 @@ const cars = [
     category: "Sedan",
     seats: "4+",
     bags: "2+",
-    transmission: "Manual",
+    transmission: "Automatic",
     price: "1,850",
     duration: "21 Days",
     image:
-      "https://i.pinimg.com/736x/d2/6d/2a/d26d2aab2ff63cb48b3a91b0e8e0aa55.jpg", // Replace with actual image URL
+      "https://i.pinimg.com/736x/d2/6d/2a/d26d2aab2ff63cb48b3a91b0e8e0aa55.jpg",
   },
   {
     name: "Toyota Corolla",
@@ -40,7 +40,7 @@ const cars = [
     price: "1,850",
     duration: "21 Days",
     image:
-      "https://i.pinimg.com/736x/d2/6d/2a/d26d2aab2ff63cb48b3a91b0e8e0aa55.jpg", // Replace with actual image URL
+      "https://i.pinimg.com/736x/d2/6d/2a/d26d2aab2ff63cb48b3a91b0e8e0aa55.jpg",
   },
   {
     name: "Toyota Camry",
@@ -48,11 +48,11 @@ const cars = [
     category: "Sedan",
     seats: "4+",
     bags: "2+",
-    transmission: "Manual",
+    transmission: "Automatic",
     price: "1,850",
     duration: "21 Days",
     image:
-      "https://i.pinimg.com/736x/d2/6d/2a/d26d2aab2ff63cb48b3a91b0e8e0aa55.jpg", // Replace with actual image URL
+      "https://i.pinimg.com/736x/d2/6d/2a/d26d2aab2ff63cb48b3a91b0e8e0aa55.jpg",
   },
   {
     name: "Toyota Rav 4",
@@ -64,7 +64,7 @@ const cars = [
     price: "1,850",
     duration: "21 Days",
     image:
-      "https://i.pinimg.com/736x/d2/6d/2a/d26d2aab2ff63cb48b3a91b0e8e0aa55.jpg", // Replace with actual image URL
+      "https://i.pinimg.com/736x/d2/6d/2a/d26d2aab2ff63cb48b3a91b0e8e0aa55.jpg",
   },
   {
     name: "BMW Z4 Convertible",
@@ -76,7 +76,7 @@ const cars = [
     price: "1,850",
     duration: "21 Days",
     image:
-      "https://i.pinimg.com/736x/d2/6d/2a/d26d2aab2ff63cb48b3a91b0e8e0aa55.jpg", // Replace with actual image URL
+      "https://i.pinimg.com/736x/d2/6d/2a/d26d2aab2ff63cb48b3a91b0e8e0aa55.jpg",
   },
 ];
 const HomePage = () => {

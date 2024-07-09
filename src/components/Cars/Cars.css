@@ -10,53 +10,55 @@
   border-radius: 15px;
   overflow: hidden;
   margin: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
-.card img {
-  width: 475px;
-  height: 274px;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 15px;
+.card-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+}
+
+.card-image {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.card-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 50%;
 }
 
 .card-title {
-  position: absolute;
-  width: 441px;
-  height: 59px;
-  left: 24px;
-  top: 271px;
   font-family: "Barlow", sans-serif;
-  font-style: normal;
   font-weight: 700;
   font-size: 22px;
   line-height: 160%;
   color: #000509;
+  margin-bottom: 8px;
 }
 
 .card-subtitle {
-  position: absolute;
-  left: 24px;
-  top: 335px;
   font-family: "Barlow", sans-serif;
-  font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 160%;
   color: #666;
+  margin-bottom: 16px;
 }
 
 .card-info {
   display: flex;
-  flex-direction: row;
   gap: 7px;
-  position: absolute;
-  left: 24px;
-  top: 370px;
+  margin-bottom: 16px;
 }
 
-.card-info span {
+.info-badge {
   display: flex;
   align-items: center;
   padding: 3px 11px 3px 6px;
@@ -65,24 +67,28 @@
   border-radius: 15px;
   color: #ffffff;
   font-family: "Barlow", sans-serif;
-  font-style: normal;
   font-weight: 600;
   font-size: 14px;
+  position: relative;
 }
 
-.card-info span img {
+.vector-icon {
   width: 20px;
   height: 20px;
+  margin-right: 5px;
 }
 
 .card-price {
-  position: absolute;
-  left: 24px;
-  top: 425px;
   font-family: "Barlow", sans-serif;
-  font-style: normal;
   font-weight: 500;
   font-size: 20px;
   line-height: 158%;
   color: #000509;
+}
+
+.card-duration {
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #666;
 }
