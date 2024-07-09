@@ -41,7 +41,9 @@
 .dropdown-header.selected .dropdown-arrow img {
   filter: invert(0);
 }
-
+.dropdown-header.unselected .dropdown-arrow img {
+  filter: invert(1);
+}
 .dropdown-menu {
   position: absolute;
   top: 100%;

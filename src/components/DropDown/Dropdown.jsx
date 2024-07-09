@@ -32,7 +32,9 @@ const Dropdown = ({ name, options }) => {
   return (
     <div className="dropdown">
       <div
-        className={`dropdown-header ${selectedOption ? "selected" : ""}`}
+        className={`dropdown-header ${
+          selectedOption ? "selected" : "unselected"
+        }`}
         onClick={toggleDropdown}
       >
         {getDisplayValue()}
