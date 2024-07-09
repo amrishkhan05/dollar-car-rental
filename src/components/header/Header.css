@@ -1,28 +1,74 @@
+/** @format */
+
 .header {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background-color: black;
-    color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  align-items: center;
 }
 
 .logo {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
-.nav {
-    display: flex;
-    align-items: center;
+.nav-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.165);
+  width: 35%;
+  line-height: 0.1;
 }
 
-.location-info {
-    display: flex;
-    gap: 10px;
+/* Nav .nav-input hover style */
+
+.nav-input:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.place-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.edit-icon {
+  width: 1rem;
+  height: 1rem;
+  color: white;
+  cursor: pointer;
+}
+
+.arrow-icon {
+  width: 1.5rem;
+  height: 1rem;
+  color: white;
+  cursor: pointer;
+}
+
+.date-time {
+  font-size: 0.8rem;
+  font-weight: 300;
 }
 
 .user-actions button {
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: none;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  padding: 10px 10px;
+}
+
+.user-actions button:hover {
+  background-color: rgba(255, 255, 255, 0.165);
+}
+
+.user-actions .btn-name {
+  margin-left: 0.5rem;
 }

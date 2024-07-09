@@ -18,11 +18,11 @@ const Card = ({ car }) => {
         <div className="card-info">
           <span className="info-badge">
             <img src={Profile} alt="Seats" className="vector-icon" />
-            {car.seats}+
+            {car.seats}
           </span>
           <span className="info-badge">
             <img src={Suitcase} alt="Bags" className="vector-icon" />
-            {car.bags}+
+            {car.bags}
           </span>
           <span className="info-badge">
             <img src={GearShift} alt="Gear" className="vector-icon" />

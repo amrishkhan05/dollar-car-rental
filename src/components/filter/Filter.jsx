@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import "./Filter.css";
-
+import Dropdown from "../DropDown/Dropdown";
 const Filters = () => {
   const [isSortOpen, setSortOpen] = useState(false);
 
@@ -36,11 +36,7 @@ const Filters = () => {
         <option>2+</option>
         <option>4+</option>
       </select>
-      <select>
-        <option>Seats</option>
-        <option>4+</option>
-        <option>6+</option>
-      </select>
+      <Dropdown />
     </div>
   );
 };
