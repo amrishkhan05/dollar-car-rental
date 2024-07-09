@@ -1,0 +1,63 @@
+/** @format */
+
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap");
+
+.section-component {
+  background: #ffffff;
+  font-family: "Barlow", sans-serif;
+  padding: 20px 0;
+  margin: 10px;
+  border-radius: 25px 25px 0 0;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section-component::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  width: 140%;
+  height: 100px;
+  background: radial-gradient(circle at top center, transparent, #ffffff);
+  transform: translateX(-50%);
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.section-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-content h1 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.section-actions {
+  display: flex;
+  align-items: center;
+}
+
+.action-item {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.action-item span:first-child {
+  margin-right: 5px;
+  font-size: 18px;
+}
+
+.action-separator {
+  width: 1px;
+  height: 24px;
+  background-color: #ddd;
+  margin: 0 20px;
+}
