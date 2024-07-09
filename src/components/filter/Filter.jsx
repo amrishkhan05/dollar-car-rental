@@ -13,6 +13,7 @@ const Filters = () => {
       <div className={`custom-select ${isSortOpen ? "open" : ""}`}>
         <div className="custom-select-trigger" onClick={toggleSort}>
           Sort By: None
+          <span className="arrow">▼</span>
         </div>
         <div className="custom-options">
           <span className="custom-option">Price: Low to High</span>

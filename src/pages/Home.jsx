@@ -1,10 +1,10 @@
 /** @format */
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Filters from "../components/filter/Filter";
 import Cars from "../components/Cars/Cars";
 import "./Home.css";
-
+import { fetchCarDetails } from "../services.js/cars.service";
 const cars = [
   {
     name: "BMW 2 Series",
@@ -15,7 +15,8 @@ const cars = [
     transmission: "Manual",
     price: "1,850",
     duration: "21 Days",
-    image: "https://example.com/bmw-2-series.jpg", // Replace with actual image URL
+    image:
+      "https://i.pinimg.com/736x/d2/6d/2a/d26d2aab2ff63cb48b3a91b0e8e0aa55.jpg", // Replace with actual image URL
   },
   {
     name: "Nissan Centra",
@@ -26,7 +27,8 @@ const cars = [
     transmission: "Manual",
     price: "1,850",
     duration: "21 Days",
-    image: "https://example.com/nissan-centra.jpg", // Replace with actual image URL
+    image:
+      "https://i.pinimg.com/736x/d2/6d/2a/d26d2aab2ff63cb48b3a91b0e8e0aa55.jpg", // Replace with actual image URL
   },
   {
     name: "Toyota Corolla",
@@ -37,7 +39,8 @@ const cars = [
     transmission: "Manual",
     price: "1,850",
     duration: "21 Days",
-    image: "https://example.com/toyota-corolla.jpg", // Replace with actual image URL
+    image:
+      "https://i.pinimg.com/736x/d2/6d/2a/d26d2aab2ff63cb48b3a91b0e8e0aa55.jpg", // Replace with actual image URL
   },
   {
     name: "Toyota Camry",
@@ -48,7 +51,8 @@ const cars = [
     transmission: "Manual",
     price: "1,850",
     duration: "21 Days",
-    image: "https://example.com/toyota-camry.jpg", // Replace with actual image URL
+    image:
+      "https://i.pinimg.com/736x/d2/6d/2a/d26d2aab2ff63cb48b3a91b0e8e0aa55.jpg", // Replace with actual image URL
   },
   {
     name: "Toyota Rav 4",
@@ -59,7 +63,8 @@ const cars = [
     transmission: "Manual",
     price: "1,850",
     duration: "21 Days",
-    image: "https://example.com/toyota-rav4.jpg", // Replace with actual image URL
+    image:
+      "https://i.pinimg.com/736x/d2/6d/2a/d26d2aab2ff63cb48b3a91b0e8e0aa55.jpg", // Replace with actual image URL
   },
   {
     name: "BMW Z4 Convertible",
@@ -70,19 +75,21 @@ const cars = [
     transmission: "Manual",
     price: "1,850",
     duration: "21 Days",
-    image: "https://example.com/bmw-z4-convertible.jpg", // Replace with actual image URL
+    image:
+      "https://i.pinimg.com/736x/d2/6d/2a/d26d2aab2ff63cb48b3a91b0e8e0aa55.jpg", // Replace with actual image URL
   },
 ];
-
-const HomePage = () => (
-  <div className="home-page">
-    <Filters />
-    <div className="car-list">
-      {cars.map((car) => (
-        <Cars key={car.name} car={car} />
-      ))}
+const HomePage = () => {
+  return (
+    <div className="home-page">
+      <Filters />
+      <div className="car-list">
+        {cars.map((car) => (
+          <Cars key={car.name} car={car} />
+        ))}
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default HomePage;
